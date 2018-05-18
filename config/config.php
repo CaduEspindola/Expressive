@@ -23,6 +23,7 @@ $aggregator = new ConfigAggregator([
     \Zend\Expressive\ConfigProvider::class,
     \Zend\Expressive\Router\ConfigProvider::class,
 
+    Core\ConfigProvider::class,
     // Default App module config
     App\ConfigProvider::class,
 
