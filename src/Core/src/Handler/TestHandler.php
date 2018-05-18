@@ -13,7 +13,7 @@ use Zend\Expressive\Template;
 use Zend\Expressive\Twig\TwigRenderer;
 use Zend\Expressive\ZendView\ZendViewRenderer;
 
-class TesteHandler implements RequestHandlerInterface
+class TestHandler implements RequestHandlerInterface
 {
     private $containerName;
 

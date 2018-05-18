@@ -9,7 +9,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
 
-class TesteHandlerFactory
+class TestHandlerFactory
 {
     public function __invoke(ContainerInterface $container) : RequestHandlerInterface
     {
@@ -18,6 +18,6 @@ class TesteHandlerFactory
             ? $container->get(TemplateRendererInterface::class)
             : null;
 
-        return new TesteHandler($router, $template, get_class($container));
+        return new TestHandler($router, $template, get_class($container));
     }
 }

@@ -12,5 +12,10 @@ use Zend\Db\Sql;
 
 class Where extends Sql\Where
 {
-    
+    public function scope(string $scope) : self
+    {
+        // apply scope
+
+        return $this;
+    }
 }

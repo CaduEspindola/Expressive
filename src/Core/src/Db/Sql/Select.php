@@ -9,13 +9,16 @@
 namespace Core\Db\Sql;
 
 use Zend\Db\Sql;
-use Zend\Db\Sql\Where;
 use Zend\Db\Sql\Join;
 use Zend\Db\Sql\Having;
 use Zend\Db\Sql\TableIdentifier;
 
 class Select extends Sql\Select
 {
+    /**
+     * @var array
+     */
+    protected $with = [];
     
     /**
      * Constructor
@@ -27,4 +30,12 @@ class Select extends Sql\Select
         $this->where = new Where;
     }
 
+    public function with(string $tableGatewayClass) : self
+    {
+        if (! class_exists($tableGatewayClass)) {
+            throw new Exception('The first parameter must be a TableGateway class.');
+        }
+
+        return $this;
+    }
 }

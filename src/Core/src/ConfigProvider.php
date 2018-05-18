@@ -33,7 +33,7 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
-                Handler\TesteHandler::class => Handler\TesteHandlerFactory::class,
+                Handler\TestHandler::class => Handler\TestHandlerFactory::class,
             ],
         ];
     }
