@@ -1,6 +1,7 @@
 <?php
 /**
  * Core (http://)
+ * 
  * @authors Cadu Espindola (cadu.espindola@gmail.com)
  * @date    2018-05-18 13:43:49
  * @version 1.0.0
@@ -30,10 +31,10 @@ class Select extends Sql\Select
         $this->where = new Where;
     }
 
-    public function with(string $tableGatewayClass) : self
+    public function joinWith(string $tableGatewayClass) : self
     {
         if (! class_exists($tableGatewayClass)) {
-            throw new Exception('The first parameter must be a TableGateway class.');
+            throw new Exception('The first parameter must be a TableGateway class name.');
         }
 
         return $this;
