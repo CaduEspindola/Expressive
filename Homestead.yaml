@@ -7,7 +7,7 @@ keys:
     - ~/.ssh/id_rsa
 folders:
     -
-        map: 'C:\Projects\core-expressive'
+        map: 'C:\Projects\impressive'
         to: /home/vagrant/code
 sites:
     -
@@ -15,6 +15,6 @@ sites:
         to: /home/vagrant/code/public
 databases:
     - homestead
-name: core-expressive
-hostname: core-expressive
+name: impressive
+hostname: impressive
 mariadb: true
